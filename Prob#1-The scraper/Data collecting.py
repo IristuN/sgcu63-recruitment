@@ -24,5 +24,5 @@ for item in data["pages"]:
     baan["name"] = baan_name
     baan["slogan"] = baan_slogan
     baan_datas["baans"].append(baan)
-with open("data_file.json", "w") as data_file:
-    json.dump(baan_datas, data_file)
+with open("data_file.json", "w", encoding='utf8') as data_file:
+    json.dump(baan_datas, data_file, ensure_ascii=False)
