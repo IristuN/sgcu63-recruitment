@@ -23,21 +23,12 @@ function searchInObject(fileToSearch, object, source, filePaths, depth){
 }
 
 function fileSearch(fileToSearch, filesObj){
-  var filePaths = {};
-  //need JSON object
-  var Obj = { 
-    FolderA: {
-     _files: ["file1","file2"] ,
-        SubfolderC: {
-      _files: ["file1"]
-      } ,
-    SubfolderB: {
-      _files : ["file1"]
-       }
-      }
-    };
-  let source = "/" + filesObj
-  searchInObject(fileToSearch, Obj[filesObj], source, filePaths, 1)
+  
+  //parse json string to object
+  var object = JSON.parse(filesObj)
+  let source = ""
+  var filePaths = {}
+  searchInObject(fileToSearch, object, source, filePaths, 0)
   
   //sort path depth in filePaths
   let orderedPaths = {}
@@ -61,3 +52,7 @@ function fileSearch(fileToSearch, filesObj){
 
   return pathArray
 }
+
+
+
+
