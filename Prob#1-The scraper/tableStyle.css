@@ -1,10 +1,11 @@
 div{
   align-self: center;
   display: flex;
-  align-items: flex-start;
+  
 }
 table{
   font-family: 'Mitr', sans-serif;
+  margin: auto;
   align-self: center;
   display: flex;
 }
@@ -19,5 +20,5 @@ tr:nth-child(odd) {
 }
 
 td{
-  padding: 5px 10px 5px 10px;
+  padding: 4px 10px 4px 10px;
 }
