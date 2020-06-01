@@ -1,0 +1,23 @@
+div{
+  align-self: center;
+  display: flex;
+  align-items: flex-start;
+}
+table{
+  font-family: 'Mitr', sans-serif;
+  align-self: center;
+  display: flex;
+}
+th {
+  background-color: lightcoral;
+  color: white;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: pink;
+}
+
+td{
+  padding: 5px 10px 5px 10px;
+}
